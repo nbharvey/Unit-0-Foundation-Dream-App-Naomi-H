@@ -14,23 +14,23 @@ export function calculateStartingDistance(userInput) {
     if (startingPointSwim <= 0) {
         startingPointSwim = (initialSwimDistance + 25) * 4;
         }
-    console.log(`Your starting distance for Swim is: ${startingPointSwim} yards`);
-    
     
     let startingPointBike = initialBikeDistance * 1.10;
     if (startingPointBike <= 0) {
         startingPointBike = (initialBikeDistance + 1) * 1.10;
         }
-    console.log(`Your starting distance for Bike is: ${startingPointBike} miles`);
     
     let startingPointRun = initialRunDistance * 1.10;
     if (startingPointRun <= 0) {
         startingPointRun = (initialRunDistance + 1) * 1.10;
         }
-    console.log(`Your starting distance for Run is: ${startingPointRun} miles`);
     
-    let userStartingPoint = [startingPointSwim, startingPointBike, startingPointRun];
+    let userStartingPoint = [startingPointSwim.toFixed(1), startingPointBike.toFixed(1), startingPointRun.toFixed(1)];
+    console.log(`Your week 1 starting Swim distance is: ${userStartingPoint[0]} yards`);
+    console.log(`Your week 1 starting distance is: ${userStartingPoint[1]} miles in Bike, and ${userStartingPoint[1]} miles in Run`);
+
     return userStartingPoint;
+
 }
 
 /*let workoutType = "Run";  
