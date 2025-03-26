@@ -1,5 +1,9 @@
 // A function that must be called with input, that does the calculations.
-function calculateStartingDistance(userInput) {
+export function calculateStartingDistance(userInput) {
+    if(userInput === undefined || userInput === null) {
+        console.error('userInput has to be provided!');
+    }
+    
     let initialSwimDistance = (Number(userInput[0]));
     let initialBikeDistance = (Number(userInput[1]));
     let initialRunDistance = (Number(userInput[2]));
@@ -28,12 +32,6 @@ function calculateStartingDistance(userInput) {
     let userStartingPoint = [startingPointSwim, startingPointBike, startingPointRun];
     return userStartingPoint;
 }
-
-
-
-
-
-
 
 /*let workoutType = "Run";  
 let distance = 7;       
