@@ -1,38 +1,37 @@
-let userInput = [];
-
-let initialSwimDistance = (Number(userInput[0]));
-let initialBikeDistance = (Number(userInput[1]));
-let initialRunDistance = (Number(userInput[2]));
-
-console.log(initialSwimDistance, initialBikeDistance, initialRunDistance);
-
-let startingPointSwim = initialSwimDistance * 1.10;
-if (startingPointSwim <= 0) {
-    startingPointSwim = (initialSwimDistance + 25) * 4;
+// A function that must be called with input, that does the calculations.
+export function calculateStartingDistance(userInput) {
+    if(userInput === undefined || userInput === null) {
+        console.error('userInput has to be provided!');
     }
-console.log(`Your starting distance for Swim is: ${startingPointSwim} yards`);
-
-
-let startingPointBike = initialBikeDistance * 1.10;
-if (startingPointBike <= 0) {
-    startingPointBike = (initialBikeDistance + 1) * 1.10;
-    }
-console.log(`Your starting distance for Bike is: ${startingPointBike} miles`);
-
-let startingPointRun = initialRunDistance * 1.10;
-if (startingPointRun <= 0) {
-    startingPointRun = (initialRunDistance + 1) * 1.10;
-    }
-console.log(`Your starting distance for Run is: ${startingPointRun} miles`);
-
-let userStartingPoint = [startingPointSwim, startingPointBike, startingPointRun];
-
-
-
-
-
-
-
+    
+    let initialSwimDistance = (Number(userInput[0]));
+    let initialBikeDistance = (Number(userInput[1]));
+    let initialRunDistance = (Number(userInput[2]));
+    
+    console.log(initialSwimDistance, initialBikeDistance, initialRunDistance);
+    
+    let startingPointSwim = initialSwimDistance * 1.10;
+    if (startingPointSwim <= 0) {
+        startingPointSwim = (initialSwimDistance + 25) * 4;
+        }
+    console.log(`Your starting distance for Swim is: ${startingPointSwim} yards`);
+    
+    
+    let startingPointBike = initialBikeDistance * 1.10;
+    if (startingPointBike <= 0) {
+        startingPointBike = (initialBikeDistance + 1) * 1.10;
+        }
+    console.log(`Your starting distance for Bike is: ${startingPointBike} miles`);
+    
+    let startingPointRun = initialRunDistance * 1.10;
+    if (startingPointRun <= 0) {
+        startingPointRun = (initialRunDistance + 1) * 1.10;
+        }
+    console.log(`Your starting distance for Run is: ${startingPointRun} miles`);
+    
+    let userStartingPoint = [startingPointSwim, startingPointBike, startingPointRun];
+    return userStartingPoint;
+}
 
 /*let workoutType = "Run";  
 let distance = 7;       
