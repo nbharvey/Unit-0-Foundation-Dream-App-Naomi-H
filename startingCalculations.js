@@ -1,6 +1,5 @@
+// A function that must be called with input, that does the calculations.
 function calculateStartingDistance(userInput) {
-    let userInput = [];
-    
     let initialSwimDistance = (Number(userInput[0]));
     let initialBikeDistance = (Number(userInput[1]));
     let initialRunDistance = (Number(userInput[2]));
